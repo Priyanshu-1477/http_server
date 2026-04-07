@@ -54,6 +54,6 @@ def start_server():
         response = build_response(body, status)
 
         client_socket.send(response.encode())
-        
+        client_socket.close()
 
 start_server()
