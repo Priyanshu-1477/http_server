@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - My HTTP Server</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 700px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #203a43;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffcc00;
+            color: black;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📡 About This Server</h1>
+
+        <p>
+            This is a <span class="highlight">custom-built HTTP server</span> created from scratch using Python sockets.
+        </p>
+
+        <p>
+            It handles incoming requests, parses them, routes them, and sends back responses —
+            just like real-world servers.
+        </p>
+
+        <p>
+            You are not using frameworks like Flask or Django —
+            you are building everything from the ground up 🔥
+        </p>
+
+        <button class="btn" onclick="window.location.href='/'">
+            ⬅ Back to Home
+        </button>
+
+        <div class="footer">
+            Built with ❤️ and low-level networking
+        </div>
+    </div>
+
+</body>
+</html>

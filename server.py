@@ -4,7 +4,7 @@ def home():
     return serve_file("index.html")
 
 def about():
-    return "<h1>About Us</h1><p>This is a simple web server built with Python.</p>"
+    return serve_file("about.html")
 
 def serve_file(filename):
     try: 
@@ -24,10 +24,10 @@ routes = {
 }
 def start_server():
     server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    server.bind(("localhost",8000))
+    server.bind(("localhost",8080))
     server.listen(5)
 
-    print("Server is listening on http://localhost:8000")
+    print("Server is listening on http://localhost:8080")
 
     while True:
         client_socket, addr = server.accept()
@@ -54,6 +54,6 @@ def start_server():
         response = build_response(body, status)
 
         client_socket.send(response.encode())
-        client_socket.close()
+        
 
 start_server()
